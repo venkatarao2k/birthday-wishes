@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  color: #333;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 30px;
+}
+
+.intro h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end), blink .75s step-end infinite;
+  font-size: 1.3em;
+  margin-top: 10px;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.reveal-section {
+  margin-top: 40px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.envelope {
+  font-size: 2em;
+  transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.message {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-size: 1.1em;
+  line-height: 1.6em;
+  display: none;
+}
+
+.footer {
+  margin-top: 40px;
+  font-style: italic;
+}
+
+/* Static Love Icons */
+.love-icons {
+  margin-top: 30px;
+}
+.love-icons img {
+  width: 60px;
+  margin: 10px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { opacity: 0.6; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.1); }
+}
+
+/* Surprise Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Cube Gallery Styling */
+.cube-gallery {
+  margin-top: 60px;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.cube-gallery h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #d63384;
+}
+
+.scene {
+  width: 220px;
+  height: 220px;
+  perspective: 1000px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinCube 20s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 12px;
+}
+
+.front  { transform: rotateY(  0deg) translateZ(110px); }
+.back   { transform: rotateY(180deg) translateZ(110px); }
+.right  { transform: rotateY( 90deg) translateZ(110px); }
+.left   { transform: rotateY(-90deg) translateZ(110px); }
+.top    { transform: rotateX( 90deg) translateZ(110px); }
+.bottom { transform: rotateX(-90deg) translateZ(110px); }
+
+@keyframes spinCube {
+  0%   { transform: rotateX(-20deg) rotateY(0deg); }
+  25%  { transform: rotateX(0deg) rotateY(90deg); }
+  50%  { transform: rotateX(20deg) rotateY(180deg); }
+  75%  { transform: rotateX(0deg) rotateY(270deg); }
+  100% { transform: rotateX(-20deg) rotateY(360deg); }
+}
+
+/* Slide-in Animation */
+.slide-in-left {
+  animation: slideIn 1.5s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive tweak for mobile */
+@media screen and (max-width: 600px) {
+  .cube-gallery {
+    text-align: center;
+    padding-left: 0;
+  }
+}

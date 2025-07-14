@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Bangaram 💛</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="intro">
+      <h1 class="fade-in">🎉 Happy Birthday, <span>Bangaram 💛</span> 🎂</h1>
+      <p class="typewriter">You are the reason my heart beats a little faster every day...</p>
+    </div>
+
+    <!-- Static Love Icons -->
+    <div class="love-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="love" />
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="love" />
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="love" />
+    </div>
+
+    <!-- Reveal Message -->
+    <div class="reveal-section" onclick="document.getElementById('birthdayMessage').style.display='block'">
+      <div class="envelope">💌 Tap to Open</div>
+    </div>
+    <div class="message" id="birthdayMessage">
+      <p>From the moment we met, you’ve brought nothing but joy and love into my life.<br>
+         Your smile, your kindness, your laughter—every part of you is my favorite chapter.<br><br>
+         Today, on your special day, I just want to say thank you for being my everything.<br><br>
+         May this year bring you endless happiness, sweet surprises, and memories we'll create together.<br><br>
+         ❤️ I love you more than words can ever say. Happy Birthday, my love! 🎂</p>
+    </div>
+
+   <!-- 3D Cube Gallery -->
+<div class="cube-gallery">
+  <h2>My Princess 💖</h2>
+  <div class="scene slide-in-left">
+    <div class="cube">
+      <img class="face front" src="photo1.jpg" alt="Front" />
+      <img class="face back" src="photo2.jpg" alt="Back" />
+      <img class="face right" src="photo3.jpg" alt="Right" />
+      <img class="face left" src="photo4.jpg" alt="Left" />
+      <img class="face top" src="photo5.jpg" alt="Top" />
+      <img class="face bottom" src="photo6.jpg" alt="Bottom" />
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="footer">
+      <p>With Love, Forever Yours 💖</p>
+    </div>
+  </div>
+
+  <!-- Surprise Popup -->
+  <div class="popup" id="surprisePopup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>💖 Surprise! 💖</h2>
+      <p>You’ve reached the bottom…  
+         But my love for you has no end.  
+         Happy Birthday again, Bangaram! 🎁💛</p>
+    </div>
+  </div>
+
+  <script>
+    // Popup logic
+    function closePopup() {
+      document.getElementById('surprisePopup').style.display = 'none';
+    }
+
+    window.onscroll = function() {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+        document.getElementById('surprisePopup').style.display = 'flex';
+      }
+    };
+  </script>
+</body>
+</html>
